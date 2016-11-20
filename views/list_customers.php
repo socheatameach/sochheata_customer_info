@@ -1,7 +1,6 @@
 <?php
-	include('../dbcon.php');
-	include('../model/execute_sql.php');
-	include('../beauti_dump.php');
+	require "../model/build-sql.php";
+	require "../dbcon.php";
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +15,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h3 class="text-info text-center">Customer list</h3>
-			<a href="add_customer.html" class="text-primary">Add</a>
+			<a href="add_customer.php" class="text-primary">Add</a>
 			<table class="table table-hover">
 				<thead>
 					<tr class="bg-warning">
@@ -33,27 +32,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php
-					$sql = "SELECT customer.id,
-								   customer.create_time,
-								   customer.firstname,
-								   customer.lastname,
-								   customer.phone_number,
-								   customer.mail,
-								   service.service_name,
-								   property.property_name,
-								   customer.favorite_location,
-								   customer.budget,
-								   customer.code_banner
-							FROM customer
-							LEFT OUTER JOIN service ON
-							customer.id=service.customer_id
-							LEFT OUTER JOIN property ON
-							customer.id=property.customer_id
-							GROUP BY customer.create_time DESC
-							LIMIT 14;";
-					?>
-					<?php	$result = $conn->query($sql); ?>
+					<?php	$result = $conn->query(build_sql_list_customer()); ?>
 					<?php   if ($result->num_rows > 0) { $i=1;
 						while($row = $result->fetch_assoc()) {?>
 							<tr>
@@ -73,12 +52,13 @@
 									<a href='update_customer.php?id=<?php echo $row["id"] ?>' class="btn btn-primary btn-xs">
 										<span class="glyphicon glyphicon-pencil"></span>
 									</a>
-									<a href='?<?php echo $row["id"] ?>' class="btn btn-danger btn-xs">
+									<a href='../controller/customer.php?id=<?php echo $row["id"] ?>' class="btn btn-danger btn-xs">
 										<span class="glyphicon glyphicon-trash"></span>
 									</a>
 								</td>
 						<?php }
 					}
+					$conn->close();
 					?>
 				</tbody>
 			</table>

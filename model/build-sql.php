@@ -77,3 +77,28 @@ function build_sql_delete_by_id($table, $where, $cols ="") {
 	return $sql;
 }
 
+
+/**
+ * @return string
+ */
+function build_sql_list_customer() {
+	$sql = "SELECT customer.id,
+				   customer.create_time,
+				   customer.firstname,
+				   customer.lastname,
+				   customer.phone_number,
+				   customer.mail,
+				   service.service_name,
+				   property.property_name,
+				   customer.favorite_location,
+				   customer.budget,
+				   customer.code_banner
+			FROM customer
+			LEFT OUTER JOIN service ON
+			customer.id=service.customer_id
+			LEFT OUTER JOIN property ON
+			customer.id=property.customer_id
+			GROUP BY customer.create_time DESC
+			LIMIT 14;";
+	return $sql;
+}

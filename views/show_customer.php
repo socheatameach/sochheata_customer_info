@@ -1,7 +1,6 @@
 <?php
 	include('../dbcon.php');
 	include('../model/execute_sql.php');
-	include('../beauti_dump.php');
 	$customer_id = $_GET['id'];
 ?>
 
@@ -17,7 +16,7 @@
 	<div class="row">
 		<div class="col-sm-12">
 			<h3 class="text-info text-center">Customer list</h3>
-			<a href="add_customer.html" class="text-primary">Add</a>
+			<a href="add_customer.php" class="text-primary">Add</a>
 			<table class="table table-hover">
 				<thead>
 				<tr class="bg-warning">
@@ -39,25 +38,23 @@
 				</thead>
 				<tbody>
 				<?php
-				$service_sql = "SELECT service_name FROM service WHERE customer_id = $customer_id";
-				$service_result = $conn->query($service_sql);
-				$service_name = array();
-				while($row = $service_result->fetch_assoc()) {
-					$service_name[] = $row["service_name"];
-				}
+					$service_sql = "SELECT service_name FROM service WHERE customer_id = $customer_id";
+					$service_result = $conn->query($service_sql);
+					$service_name = array();
+					while($row = $service_result->fetch_assoc()) {
+						$service_name[] = $row["service_name"];
+					}
 
-				$property_sql = "SELECT property_name FROM property WHERE customer_id = $customer_id";
-				$property_result = $conn->query($property_sql);
-				$property_name = array();
-				while($row = $property_result->fetch_assoc()) {
-					$property_name[] = $row["property_name"];
-				}
+					$property_sql = "SELECT property_name FROM property WHERE customer_id = $customer_id";
+					$property_result = $conn->query($property_sql);
+					$property_name = array();
+					while($row = $property_result->fetch_assoc()) {
+						$property_name[] = $row["property_name"];
+					}
 
-				$sql = "	SELECT * FROM customer WHERE  customer.id = $customer_id;";
-				$result = $conn->query($sql);
-
+					$sql = "	SELECT * FROM customer WHERE  customer.id = $customer_id;";
+					$result = $conn->query($sql);
 				?>
-
 				<?php   if ($result->num_rows > 0) { $i=1;
 				while($row = $result->fetch_assoc()) {?>
 				<tr>
@@ -75,18 +72,16 @@
 					<td><?php echo $row["comment"]?></td>
 					<td><?php echo $row["purpose"]?></td>
 					<td class="text-right">
-<!--						<a href='show_customer.php?id=--><?php //echo $row["id"] ?><!--' class="btn btn-success btn-xs">-->
-<!--							<span class="glyphicon glyphicon-info-sign"></span>-->
-<!--						</a>-->
 						<a href='update_customer.php?id=<?php echo $row["id"] ?>' class="btn btn-primary btn-xs">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
-						<a href='?<?php echo $row["id"] ?>' class="btn btn-danger btn-xs">
+						<a disabled href='?id=<?php echo $row["id"] ?>' class="btn btn-danger btn-xs">
 							<span class="glyphicon glyphicon-trash"></span>
 						</a>
 					</td>
 					<?php }
 					}
+					$conn->close();
 					?>
 				</tbody>
 

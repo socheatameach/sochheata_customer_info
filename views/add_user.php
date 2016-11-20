@@ -22,7 +22,7 @@
 					<option value="1">Editor</option>
 				</select>
 				<br>
-				<button type="submit">Submit</button>
+				<button type="submit" name="submit" value="add">Submit</button>
 				<button type="reset">Cancel</button>
 			</form>
 		</div>
