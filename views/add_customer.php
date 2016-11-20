@@ -23,38 +23,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="row">
-				  <div class="col-sm-12">
-					<div class="table-responsive">
-					  <table class="table">
-						<tr>
-						  <td>
-							<span class="text-title"><strong>Code:</strong></span>
-							<div class="text-input">
-							  <input type="text" name="code" class="" placeholder="..........................................................................................." />
-							</div>
-						  </td>
-						</tr>
-						<tr>
-						  <td>
-							<span class="text-title"><strong>Date:</strong></span>
-							<div class="text-input">
-							  <input type="text" name="date" class="datt" placeholder="........................................." />/
-							  <input type="text" name="date" class="datt" placeholder="........................................." />/
-							  <input type="text" name="date" class="datt" placeholder="........................................." />
-							</div>
-						  </td>
-						  <td>
-							<span class="text-title"><strong>Assign by:</strong></span>
-							<div class="text-input">
-							  <input type="text" name="assignby" class="" placeholder="..........................................................................................." />
-							</div>
-						  </td>
-						</tr>
-					  </table>
-					</div>
-				  </div>
-				</div> -->
 				<div class="row">
 					<div class="col-sm-12">
 						<h4 class="titletext">Property Information</h4>
@@ -127,19 +95,7 @@
 									<td>
 										<span class="text-title"><strong>Code Banner:</strong></span>
 										<div class="text-input">
-											<input type="text" name="code_banner" class="" placeholder="........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................" />
-										</div>
-									</td>
-
-									<td>
-										<div class="form-group">
-											<label class="col-xs-3 control-label">Date</label>
-											<div class="col-xs-5 date">
-												<div class="input-group input-append date" id="datepicker">
-													<input type="text" class="form-control" name="date" />
-													<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
-												</div>
-											</div>
+											<input type="text" name="code_banner" class="" placeholder="............................................................................................." />
 										</div>
 									</td>
 
@@ -270,7 +226,7 @@
 										<td>
 											<span class="text-title"><strong>Other</strong></span>
 											<div class="text-input">
-												<input type="text" name="" value="dd" class="" placeholder="............................................................................................................................................................................................................................................................................................................................................................................" />
+												<input type="text" name="other_property"  class="" placeholder="............................................................................................................................................................................................................................................................................................................................................................................" />
 											</div>
 										</td>
 									</tr>

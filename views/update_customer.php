@@ -125,19 +125,6 @@
 											<input type="text" name="code_banner" value='<?php echo $row["code_banner"]?>' class="" placeholder="........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................" />
 										</div>
 									</td>
-
-									<td>
-										<div class="form-group">
-											<label class="col-xs-3 control-label">Date</label>
-											<div class="col-xs-5 date">
-												<div class="input-group input-append date" id="datepicker">
-													<input type="text" class="form-control" disabled name="date" />
-													<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
-												</div>
-											</div>
-										</div>
-									</td>
-
 								</tr>
 								</tbody>
 							</table>
@@ -259,13 +246,32 @@
 											<div class="text-title"><strong>Warehouse</strong></div>
 										</td>
 									</tr>
-
-
+									<?php
+										$properties = array(
+											"apartement",
+											"building",
+											"business",
+											"condo",
+											"factory",
+											"hotel",
+											"land",
+											"house",
+											"villa",
+											"office",
+											"warehouse"
+										);
+										$other ="";
+										foreach ($property_name as $value){
+											if(!in_array($value, $properties)){
+												$other = $value;
+											};
+										}
+									?>
 									<tr>
 										<td>
 											<span class="text-title"><strong>Other</strong></span>
 											<div class="text-input">
-												<input type="text" name="" value="dd" class="" placeholder="............................................................................................................................................................................................................................................................................................................................................................................" />
+												<input type="text" value='<?php echo $other; ?>' name="other_property" class="" placeholder="............................................................................................................................................................................................................................................................................................................................................................................" />
 											</div>
 										</td>
 									</tr>

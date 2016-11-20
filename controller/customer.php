@@ -11,6 +11,10 @@ $_POST['user_id'] = 1;
 $service = "";
 $property = "";
 
+($_POST['other_property']);
+
+
+
 if(isset($_POST['submit'])){
 	$GLOBALS['service'] = $_POST['service'];
 	$GLOBALS['property'] = $_POST['property'];
@@ -34,14 +38,18 @@ if(isset($_POST['submit'])){
  * @param $conn
  */
 function add_customer($conn) {
-	unset($_POST['service'], $_POST['property'], $_POST['date'], $_POST['submit']);
+
+	if($_POST['other_property']){
+		array_push($GLOBALS['property'], $_POST['other_property']);
+	}
+	unset($_POST['service'], $_POST['property'], $_POST['date'], $_POST['other_property'], $_POST['submit']);
 	$customer_sql = build_sql_insert("customer", $_POST);
 	execute_sql($customer_sql, $conn);
 
 	$last_customer_id = $conn->insert_id;
 	add_service($conn, $GLOBALS['service'], $last_customer_id);
 	add_property($conn, $GLOBALS['property'], $last_customer_id);
-	header( "Location: http://localhost/sochheata_customer_info/views/list_customer.php");
+	header( "Location: http://localhost/sochheata_customer_info/views/list_customers.php");
 }
 
 
@@ -53,7 +61,10 @@ function update_customer_by_id($conn) {
 	$customer_id = $_POST['id'];
 	$where = "id = $customer_id";
 
-	unset($_POST['service'], $_POST['property'], $_POST['date'], $_POST['id'], $_POST['submit']);
+	if($_POST['other_property']){
+		array_push($GLOBALS['property'], $_POST['other_property']);
+	}
+	unset($_POST['service'], $_POST['property'], $_POST['date'], $_POST['id'],$_POST['other_property'], $_POST['submit']);
 	$customer_sql = build_sql_update("customer", $_POST, $where);
 	execute_sql($customer_sql, $conn);
 
