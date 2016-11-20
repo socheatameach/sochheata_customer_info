@@ -1,5 +1,5 @@
 <?php
-header( 'Location: http://localhost/socheata_example/views/list_customers.php' );
+header( 'Location: http://localhost/sochheata_customer_info/views/list_customers.php' );
 include('dbcon.php');
 ?>
 <html>
@@ -46,7 +46,7 @@ include('dbcon.php');
             <table class="table">
               <tr>
                 <td>
-                  <span class="text-title"><strong>Code:</strong></span> 
+                  <span class="text-title"><strong>Code:</strong></span>
                   <div class="text-input">
                     <input type="text" name="code" class="" placeholder="..........................................................................................." />
                   </div>
@@ -54,7 +54,7 @@ include('dbcon.php');
               </tr>
               <tr>
                 <td>
-                  <span class="text-title"><strong>Date:</strong></span> 
+                  <span class="text-title"><strong>Date:</strong></span>
                   <div class="text-input">
                     <input type="text" name="date" class="datt" placeholder="........................................." />/
                     <input type="text" name="date" class="datt" placeholder="........................................." />/
@@ -62,7 +62,7 @@ include('dbcon.php');
                   </div>
                 </td>
                 <td>
-                  <span class="text-title"><strong>Assign by:</strong></span> 
+                  <span class="text-title"><strong>Assign by:</strong></span>
                   <div class="text-input">
                     <input type="text" name="assignby" class="" placeholder="..........................................................................................." />
                   </div>
@@ -80,19 +80,19 @@ include('dbcon.php');
               <tbody>
                 <tr>
                   <td>
-                    <span class="text-title"><strong>First Name:</strong></span> 
+                    <span class="text-title"><strong>First Name:</strong></span>
                     <div class="text-input">
                       <input type="text" name="firstname" class="" placeholder="..........................................................................................." />
                     </div>
                   </td>
                   <td>
-                    <span class="text-title"><strong>last Name:</strong></span> 
+                    <span class="text-title"><strong>last Name:</strong></span>
                     <div class="text-input">
                       <input type="text" name="lastname" class="" placeholder="..........................................................................................." />
                     </div>
                   </td>
                   <td>
-                    <span class="text-title"><strong>Sex:</strong></span> 
+                    <span class="text-title"><strong>Sex:</strong></span>
                     <div class="text-input">
                       <input type="text" name="sex" class="" placeholder="..........................................................................................." />
                     </div>
@@ -100,19 +100,19 @@ include('dbcon.php');
                 </tr>
                 <tr>
                   <td>
-                    <span class="text-title"><strong>Nationality:</strong></span> 
+                    <span class="text-title"><strong>Nationality:</strong></span>
                     <div class="text-input">
                       <input type="text" name="nationality" class="" placeholder="..........................................................................................." />
                     </div>
                   </td>
                   <td>
-                    <span class="text-title"><strong>Position:</strong></span> 
+                    <span class="text-title"><strong>Position:</strong></span>
                     <div class="text-input">
                       <input type="text" name="position" class="" placeholder="..........................................................................................." />
                     </div>
                   </td>
                   <td>
-                    <span class="text-title"><strong>E-mail:</strong></span> 
+                    <span class="text-title"><strong>E-mail:</strong></span>
                     <div class="text-input">
                       <input type="text" name="email" class="" placeholder="..........................................................................................." />
                     </div>
@@ -124,13 +124,13 @@ include('dbcon.php');
               <tbody>
                 <tr>
                   <td>
-                    <span class="text-title"><strong>Phone:</strong></span> 
+                    <span class="text-title"><strong>Phone:</strong></span>
                     <div class="text-input">
                       <input type="text" name="phone" class="" placeholder=".............................................................................................................................................." />
                     </div>
                   </td>
                   <td>
-                    <span class="text-title"><strong>Address:</strong></span> 
+                    <span class="text-title"><strong>Address:</strong></span>
                     <div class="text-input">
                       <input type="text" name="address" class="" placeholder="......................................................................................................................................................................................" />
                     </div>
@@ -142,7 +142,7 @@ include('dbcon.php');
               <tbody>
                 <tr>
                   <td>
-                    <span class="text-title"><strong>Code Banner:</strong></span> 
+                    <span class="text-title"><strong>Code Banner:</strong></span>
                     <div class="text-input">
                       <input type="text" name="codebanner" class="" placeholder="........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................" />
                     </div>
@@ -164,12 +164,12 @@ include('dbcon.php');
               </tbody>
             </table>
           </div>
-        </div>  
+        </div>
       </div>
       <div class="row">
         <div class="col-sm-12">
           <h4 class="titletext">Customer Requirement</h4>
-          <span class="text-title service"><strong>Service:</strong></span> 
+          <span class="text-title service"><strong>Service:</strong></span>
           <div class="">
             <div class="table-responsive">
               <table class="table">
@@ -194,7 +194,7 @@ include('dbcon.php');
                       </label>
                     </td>
                     <td>
-                      <span class="text-title"><strong>Budget </strong></span> 
+                      <span class="text-title"><strong>Budget </strong></span>
                       <div class="">
                         <input type="text" name="budget" class="budget" placeholder="" />
                       </div>
@@ -282,7 +282,7 @@ include('dbcon.php');
                     </td>
                   </tr>
 
-                  
+
                   <tr>
                     <td>
                       <span class="text-title"><strong>Other</strong></span>
@@ -291,7 +291,7 @@ include('dbcon.php');
                       </div>
                     </td>
                   </tr>
-          
+
                 </tbody>
               </table>
             </div>
@@ -301,7 +301,7 @@ include('dbcon.php');
             <tbody>
               <tr>
                 <td>
-                  <span class="text-title"><strong>Favorite Location:</strong></span> 
+                  <span class="text-title"><strong>Favorite Location:</strong></span>
                   <div class="text-input">
                     <input type="text" name="location" class="" placeholder=" ............................................................................................................................................................................................................................................................................................................................................................................" />
                   </div>
@@ -310,7 +310,7 @@ include('dbcon.php');
             </tbody>
           </table>
           </div>
-        </div>  
+        </div>
       </div>
       <div class="row">
         <div class="col-sm-12">
@@ -329,7 +329,7 @@ include('dbcon.php');
               <textarea class="form-control" rows="5" placeholder="....................................................................................................................................................................................................................................................................................................................................................................................................................................................................................." ></textarea>
             </div>
           </div>
-        </div>  
+        </div>
       </div>
       <div class="col-md-6 col-md-offset-12">
           <input type="submit" name="submit" value="Add" class="btn btn-success">
@@ -448,10 +448,10 @@ while($customer_rows=mysqli_fetch_array($customer_query)){
     <td><?php echo $customer_rows['location'] ; ?></td>
     <td><?php echo $customer_rows['additionalcomment'] ; ?></td>
     <td><?php echo $customer_rows['purpose'] ; ?></td>
-    
+
     <td>
        <a href="edit.php<?php echo '?id='.$customer_rows['customerid']; ?>"><button class="btn btn-warning">Edit</button></a>
-       <a href="delete.php<?php echo '?id='.$customer_rows['customerid'];?>"><button class="btn btn-danger">Delete</button></a> 
+       <a href="delete.php<?php echo '?id='.$customer_rows['customerid'];?>"><button class="btn btn-danger">Delete</button></a>
     </td>
   </tr>
 <?php }?>

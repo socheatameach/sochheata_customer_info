@@ -75,10 +75,10 @@
 					<td><?php echo $row["comment"]?></td>
 					<td><?php echo $row["purpose"]?></td>
 					<td class="text-right">
-						<a href='show_customer.php?id=<?php echo $row["id"] ?>' class="btn btn-success btn-xs">
-							<span class="glyphicon glyphicon-info-sign"></span>
-						</a>
-						<a href='?id=<?php echo $row["id"] ?>' class="btn btn-primary btn-xs">
+<!--						<a href='show_customer.php?id=--><?php //echo $row["id"] ?><!--' class="btn btn-success btn-xs">-->
+<!--							<span class="glyphicon glyphicon-info-sign"></span>-->
+<!--						</a>-->
+						<a href='update_customer.php?id=<?php echo $row["id"] ?>' class="btn btn-primary btn-xs">
 							<span class="glyphicon glyphicon-pencil"></span>
 						</a>
 						<a href='?<?php echo $row["id"] ?>' class="btn btn-danger btn-xs">

@@ -13,9 +13,9 @@ function is_assoc($arr)
  * @param $table
  * @param $data
  * @param string $cols
- * @param int $last_id
+ * @param string $last_id
  *
- * @return bool|string
+ * @return string
  */
 function build_sql_insert($table, $data, $cols = "", $last_id = "") {
 
@@ -41,7 +41,8 @@ function build_sql_insert($table, $data, $cols = "", $last_id = "") {
  * @param $table
  * @param $data
  * @param $where
- * @param null $col
+ * @param string $col
+ *
  * @return string
  */
 function build_sql_update($table, $data, $where, $col="") {
@@ -64,4 +65,15 @@ function build_sql_update($table, $data, $where, $col="") {
 	return($sql);
 }
 
+/**
+ * @param $table
+ * @param string $cols
+ * @param $where
+ *
+ * @return string
+ */
+function build_sql_delete_by_id($table, $where, $cols ="") {
+	$sql = "DELETE $cols FROM $table WHERE $where";
+	return $sql;
+}
 
