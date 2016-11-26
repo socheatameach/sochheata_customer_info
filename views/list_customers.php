@@ -9,6 +9,16 @@
 	<meta charset="UTF-8">
 	<title>List customer info</title>
 	<link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css"/>
+	<!--<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-datepicker3.min.css" />-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+	<!--<script src="bootstrap/js/bootstrap-datepicker.min.js"></script>-->
+	
 </head>
 <body>
 <div class="container">
@@ -16,11 +26,11 @@
 		<div class="col-sm-12">
 			<h3 class="text-info text-center">Customer list</h3>
 			<a href="add_customer.php" class="text-primary">Add</a>
-			<table class="table table-hover">
+			<table class="table table-hover" id="example">
 				<thead>
 					<tr class="bg-warning">
 						<th>No</th>
-						<th>Name</th>
+						<th><a href="#" id="sortname"><i class="fa fa-arrows-v" aria-hidden="true"></i></a>Name</th>
 						<th>Tel</th>
 						<th>Mail</th>
 						<th>Service</th>
@@ -64,6 +74,14 @@
 			</table>
 		</div>
 	</div>
+	<script>
+		$(document).ready(function(){
+			$(document).ready(function() {
+				$('#example').DataTable();
+			});
+		});
+	</script>
+	
 </div>
 </body>
 </html>

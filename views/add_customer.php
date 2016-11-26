@@ -98,6 +98,17 @@
 											<input type="text" name="code_banner" class="" placeholder="............................................................................................." />
 										</div>
 									</td>
+									<td>
+										<div class="form-group">
+											<label class="col-xs-3 control-label">Date</label>
+											<div class="col-xs-5 date">
+												<div class="input-group input-append date" id="datepicker">
+													<input type="text" class="form-control" name="date" />
+													<span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+												</div>
+											</div>
+										</div>
+									</td>
 
 								</tr>
 								</tbody>

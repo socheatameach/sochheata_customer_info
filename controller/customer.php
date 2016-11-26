@@ -49,7 +49,7 @@ function add_customer($conn) {
 	$last_customer_id = $conn->insert_id;
 	add_service($conn, $GLOBALS['service'], $last_customer_id);
 	add_property($conn, $GLOBALS['property'], $last_customer_id);
-	header( "Location: http://localhost/sochheata_customer_info/views/list_customers.php");
+	header( "Location: http://localhost/sochheata_customer_info-master/views/list_customers.php");
 }
 
 
@@ -88,5 +88,5 @@ function delete_customer_by_id($conn, $customer_id) {
 	delete_property($conn, $customer_id);
 	$delete_customer_sql = build_sql_delete_by_id("customer", $where) ;
 	execute_sql($delete_customer_sql, $conn);
-	header( "Location: http://localhost/sochheata_customer_info/views/list_customers.php");
+	header( "Location: http://localhost/sochheata_customer_info-master/views/list_customers.php");
 }

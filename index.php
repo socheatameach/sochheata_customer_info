@@ -1,2 +1,2 @@
 <?php
-header( 'Location: http://localhost/sochheata_customer_info/views/list_customers.php' );
+header( 'Location: http://localhost/sochheata_customer_info-master/views/list_customers.php' );
